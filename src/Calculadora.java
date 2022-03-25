@@ -40,4 +40,45 @@ public class Calculadora {
     public void setSegundoValor(double segundoValor) {
         this.segundoValor = segundoValor;
     }
+
+    public double sumar() {
+        return primerValor + segundoValor;
+    }
+
+    public double restar() {
+        return primerValor - segundoValor;
+    }
+
+    public double multiplicar() {
+        return primerValor * segundoValor;
+    }
+
+    public double dividir() {
+        if (segundoValor != 0) {
+            return primerValor / segundoValor;
+        } else {
+            return 0.0;
+        }
+    }
+
+
+
+
+    public String elevarAPotencia() {
+        if (EsCientifica == true) {
+
+            return " " + (Math.pow(primerValor, segundoValor));
+        } else {
+           return "Su calculadora no es científica, no puede realizar esta operación";
+
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "La calculadora es de marca"+"["+ marca + "]" +
+               "y" + EsCientifica +"cientifica";
 }
+}
+// "La calculadora es de marca
+// [concatenar marca] y [es/no es (dependiendo del valor booleano)] científica".
